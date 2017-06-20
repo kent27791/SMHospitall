@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA282A7E-760F-4F60-A8A9-613604797187}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMHospitall</RootNamespace>
+    <AssemblyName>SMHospitall.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bindingSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataWork.cs" />
+    <Compile Include="Data\OffworkHospitall.cs" />
+    <Compile Include="Data\SickType.cs" />
+    <Compile Include="Data\Company.cs" />
+    <Compile Include="Data\district.cs" />
+    <Compile Include="Data\EndUser.cs" />
+    <Compile Include="Data\Medicall.cs" />
+    <Compile Include="Data\Notebook.cs" />
+    <Compile Include="Data\Official.cs" />
+    <Compile Include="Data\OfficialGroup.cs" />
+    <Compile Include="Data\OffWork.cs" />
+    <Compile Include="Data\OffWorkInterface.cs" />
+    <Compile Include="Data\People.cs" />
+    <Compile Include="Data\PermissionSet.cs" />
+    <Compile Include="Data\Permisson.cs" />
+    <Compile Include="Data\Person.cs" />
+    <Compile Include="Data\Prefectures.cs" />
+    <Compile Include="Data\Profession.cs" />
+    <Compile Include="Data\Provinces.cs" />
+    <Compile Include="Data\Sciences.cs" />
+    <Compile Include="Data\Sick.cs" />
+    <Compile Include="Data\ToHospitall.cs" />
+    <Compile Include="Data\UcHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data\UcHeader.Designer.cs">
+      <DependentUpon>UcHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\User.cs" />
+    <Compile Include="Data\UserGroup.cs" />
+    <Compile Include="Data\XPObject.cs" />
+    <Compile Include="ObjectFile.cs" />
+    <Compile Include="PermissionHow.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="UnitOfWork.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UnitOfWork.Designer.cs">
+      <DependentUpon>UnitOfWork.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\SMHospitall.Data.EndUser.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\UcHeader.resx">
+      <DependentUpon>UcHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

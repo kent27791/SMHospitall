@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8340EB88-B665-4A62-B8A6-AE11F9F04D19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMHospitall</RootNamespace>
+    <AssemblyName>SMHospitall</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1.Linq, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v11.1.Linq, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v11.1.Providers, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v11.1.Providers.Compact, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Data.ConnectionUI" />
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server Compact Edition\v3.5\Desktop\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ctr\RCEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ctr\UcAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctr\UcAction.Designer.cs">
+      <DependentUpon>UcAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctr\UcAction1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctr\UcAction1.Designer.cs">
+      <DependentUpon>UcAction1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctr\UcPermission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctr\UcPermission.Designer.cs">
+      <DependentUpon>UcPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctr\UcTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctr\UcTime.Designer.cs">
+      <DependentUpon>UcTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataReport\dataToHospitalBySicks.cs" />
+    <Compile Include="DataReport\dataToHospitallByDoctor.cs" />
+    <Compile Include="DataReport\classData.cs" />
+    <Compile Include="DataReport\reportSicks.cs" />
+    <Compile Include="DataReport\reportSicksByDoctor.cs" />
+    <Compile Include="DataReport\reportSicksBySicks.cs" />
+    <Compile Include="DataReport\dataToHospitall.cs" />
+    <Compile Include="Forms\frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChangedPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangedPass.Designer.cs">
+      <DependentUpon>frmChangedPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompany.Designer.cs">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompanys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompanys.Designer.cs">
+      <DependentUpon>frmCompanys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDelete.Designer.cs">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeleteToHospitall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeleteToHospitall.Designer.cs">
+      <DependentUpon>frmDeleteToHospitall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDistrict.Designer.cs">
+      <DependentUpon>frmDistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDistricts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDistricts.Designer.cs">
+      <DependentUpon>frmDistricts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEndUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEndUser.Designer.cs">
+      <DependentUpon>frmEndUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMedicall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMedicall.Designer.cs">
+      <DependentUpon>frmMedicall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMedicalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMedicalls.Designer.cs">
+      <DependentUpon>frmMedicalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewData.Designer.cs">
+      <DependentUpon>frmNewData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNotebook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNotebook.Designer.cs">
+      <DependentUpon>frmNotebook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNotebooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNotebooks.Designer.cs">
+      <DependentUpon>frmNotebooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOfficial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOfficial.Designer.cs">
+      <DependentUpon>frmOfficial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOfficialGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOfficialGroup.Designer.cs">
+      <DependentUpon>frmOfficialGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOfficialGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOfficialGroups.Designer.cs">
+      <DependentUpon>frmOfficialGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOfficials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOfficials.Designer.cs">
+      <DependentUpon>frmOfficials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOffWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOffWork.Designer.cs">
+      <DependentUpon>frmOffWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOffWOrks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOffWOrks.Designer.cs">
+      <DependentUpon>frmOffWOrks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPeople.Designer.cs">
+      <DependentUpon>frmPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPeoples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPeoples.Designer.cs">
+      <DependentUpon>frmPeoples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrefecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrefecture.Designer.cs">
+      <DependentUpon>frmPrefecture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrefectures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrefectures.Designer.cs">
+      <DependentUpon>frmPrefectures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfession.Designer.cs">
+      <DependentUpon>frmProfession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfession2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfession2.Designer.cs">
+      <DependentUpon>frmProfession2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProvince.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProvince.Designer.cs">
+      <DependentUpon>frmProvince.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProvinces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProvincess.Designer.cs">
+      <DependentUpon>frmProvinces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmScience.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmScience.Designer.cs">
+      <DependentUpon>frmScience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSciences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSciences.Designer.cs">
+      <DependentUpon>frmSciences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSearchObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSearchObject.Designer.cs">
+      <DependentUpon>frmSearchObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSick.Designer.cs">
+      <DependentUpon>frmSick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSicks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSicks.Designer.cs">
+      <DependentUpon>frmSicks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSickToHospitall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSickToHospitall.Designer.cs">
+      <DependentUpon>frmSickToHospitall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSickToHospitalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSickToHospitalls.Designer.cs">
+      <DependentUpon>frmSickToHospitalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmToHospitalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmToHospitalls.Designer.cs">
+      <DependentUpon>frmToHospitalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmToHospitallss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmToHospitallss.Designer.cs">
+      <DependentUpon>frmToHospitallss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserGroup.Designer.cs">
+      <DependentUpon>frmUserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserGroups.Designer.cs">
+      <DependentUpon>frmUserGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libs.cs" />
+    <Compile Include="MyWindowListener.cs" />
+    <Compile Include="PermissionWork.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ReportDevExpess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportDevExpess.Designer.cs">
+      <DependentUpon>ReportDevExpess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportSickByDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportSickByDoctors.Designer.cs">
+      <DependentUpon>ReportSickByDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportSickBySicks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportSickBySicks.Designer.cs">
+      <DependentUpon>ReportSickBySicks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportSicks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportSicks.Designer.cs">
+      <DependentUpon>ReportSicks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportToHospitalByDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportToHospitalByDoctor.Designer.cs">
+      <DependentUpon>ReportToHospitalByDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportToHospitalBySick.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportToHospitalBySick.Designer.cs">
+      <DependentUpon>ReportToHospitalBySick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportToHospitall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportToHospitall.Designer.cs">
+      <DependentUpon>ReportToHospitall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBase.Designer.cs">
+      <DependentUpon>rptBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptOffWork.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptOffWork.Designer.cs">
+      <DependentUpon>rptOffWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptReportSickBySicks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptReportSickBySicks.Designer.cs">
+      <DependentUpon>rptReportSickBySicks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptReportSicks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptReportSicks.Designer.cs">
+      <DependentUpon>rptReportSicks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptReportSicksByDoctors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptReportSicksByDoctors.Designer.cs">
+      <DependentUpon>rptReportSicksByDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptReportToHospitallByDoctor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptReportToHospitallByDoctor.Designer.cs">
+      <DependentUpon>rptReportToHospitallByDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptReportToHospitallBySick.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptReportToHospitallBySick.Designer.cs">
+      <DependentUpon>rptReportToHospitallBySick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptReportToHospitalls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptReportToHospitalls.Designer.cs">
+      <DependentUpon>rptReportToHospitalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptToHospitall.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptToHospitall.Designer.cs">
+      <DependentUpon>rptToHospitall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UcReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UcReports.Designer.cs">
+      <DependentUpon>UcReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="VietNammese\ActiveVN.cs" />
+    <Compile Include="VietNammese\Format.cs" />
+    <Compile Include="VietNammese\Localizer.cs" />
+    <Compile Include="VietNammese\PreviewLocalizer.cs" />
+    <EmbeddedResource Include="Ctr\UcAction.resx">
+      <DependentUpon>UcAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctr\UcAction1.resx">
+      <DependentUpon>UcAction1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctr\UcPermission.resx">
+      <DependentUpon>UcPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctr\UcTime.resx">
+      <DependentUpon>UcTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChangedPass.resx">
+      <DependentUpon>frmChangedPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompany.resx">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompanys.resx">
+      <DependentUpon>frmCompanys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDelete.resx">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeleteToHospitall.resx">
+      <DependentUpon>frmDeleteToHospitall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDistrict.resx">
+      <DependentUpon>frmDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDistricts.resx">
+      <DependentUpon>frmDistricts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEndUser.resx">
+      <DependentUpon>frmEndUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMedicall.resx">
+      <DependentUpon>frmMedicall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMedicalls.resx">
+      <DependentUpon>frmMedicalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewData.resx">
+      <DependentUpon>frmNewData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNotebook.resx">
+      <DependentUpon>frmNotebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNotebooks.resx">
+      <DependentUpon>frmNotebooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOfficial.resx">
+      <DependentUpon>frmOfficial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOfficialGroup.resx">
+      <DependentUpon>frmOfficialGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOfficialGroups.resx">
+      <DependentUpon>frmOfficialGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOfficials.resx">
+      <DependentUpon>frmOfficials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOffWork.resx">
+      <DependentUpon>frmOffWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOffWOrks.resx">
+      <DependentUpon>frmOffWOrks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPeople.resx">
+      <DependentUpon>frmPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPeoples.resx">
+      <DependentUpon>frmPeoples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrefecture.resx">
+      <DependentUpon>frmPrefecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrefectures.resx">
+      <DependentUpon>frmPrefectures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfession.resx">
+      <DependentUpon>frmProfession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfession2.resx">
+      <DependentUpon>frmProfession2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProvince.resx">
+      <DependentUpon>frmProvince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProvinces.resx">
+      <DependentUpon>frmProvinces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmScience.resx">
+      <DependentUpon>frmScience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSciences.resx">
+      <DependentUpon>frmSciences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSearchObject.resx">
+      <DependentUpon>frmSearchObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSick.resx">
+      <DependentUpon>frmSick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSicks.resx">
+      <DependentUpon>frmSicks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSickToHospitall.resx">
+      <DependentUpon>frmSickToHospitall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSickToHospitalls.resx">
+      <DependentUpon>frmSickToHospitalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmToHospitalls.resx">
+      <DependentUpon>frmToHospitalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmToHospitallss.resx">
+      <DependentUpon>frmToHospitallss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserGroup.resx">
+      <DependentUpon>frmUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserGroups.resx">
+      <DependentUpon>frmUserGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\ReportDevExpess.resx">
+      <DependentUpon>ReportDevExpess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportSickByDoctors.resx">
+      <DependentUpon>ReportSickByDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportSickBySicks.resx">
+      <DependentUpon>ReportSickBySicks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportSicks.resx">
+      <DependentUpon>ReportSicks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportToHospitalByDoctor.resx">
+      <DependentUpon>ReportToHospitalByDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportToHospitalBySick.resx">
+      <DependentUpon>ReportToHospitalBySick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportToHospitall.resx">
+      <DependentUpon>ReportToHospitall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBase.resx">
+      <DependentUpon>rptBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptOffWork.resx">
+      <DependentUpon>rptOffWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptReportSickBySicks.resx">
+      <DependentUpon>rptReportSickBySicks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptReportSicks.resx">
+      <DependentUpon>rptReportSicks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptReportSicksByDoctors.resx">
+      <DependentUpon>rptReportSicksByDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptReportToHospitallByDoctor.resx">
+      <DependentUpon>rptReportToHospitallByDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptReportToHospitallBySick.resx">
+      <DependentUpon>rptReportToHospitallBySick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptReportToHospitalls.resx">
+      <DependentUpon>rptReportToHospitalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptToHospitall.resx">
+      <DependentUpon>rptToHospitall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UcReports.resx">
+      <DependentUpon>UcReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Company.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.district.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.EndUser.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Medicall.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Notebook.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Official.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.OfficialGroup.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.OffWork.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.People.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.PermissionSet.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Person.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Prefectures.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Profession.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Provinces.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Sciences.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.Sick.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.ToHospitall.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.User.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.Data.UserGroup.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.DataReport.dataToHospitalBySicks.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.DataReport.dataToHospitall.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.DataReport.dataToHospitallByDoctor.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.DataReport.reportSicks.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.DataReport.reportSicksByDoctor.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.DataReport.reportSicksBySicks.datasource" />
+    <None Include="Properties\DataSources\SMHospitall.DataReport.reportToHospitall.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del1_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit1-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scipt_print1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_add_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMHospitall.Data\SMHospitall.Data.csproj">
+      <Project>{FA282A7E-760F-4F60-A8A9-613604797187}</Project>
+      <Name>SMHospitall.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\ChinhSuaLogoBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
